@@ -14,7 +14,7 @@ class CreateBindCacheTable extends Migration {
 	{
 		Schema::create('bind_cache', function(Blueprint $table)
 		{
-			$table->integer('domainID')->primary();
+			$table->integer('domain_id')->primary();
 			$table->text('bindConfig');
 		});
 	}

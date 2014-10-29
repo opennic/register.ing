@@ -14,12 +14,12 @@ class CreateDomainDnsRecordsTable extends Migration {
 	{
 		Schema::create('domain_dns_records', function(Blueprint $table)
 		{
-			$table->integer('domainID');
-			$table->integer('recordID', true);
-			$table->string('recordName', 64)->index('recordname');
-			$table->string('recordType', 6);
-			$table->string('recordValue', 96);
-			$table->index(['domainID','recordType'], 'domainID');
+			$table->integer('domain_id');
+			$table->integer('record_id', true);
+			$table->string('record_name', 64)->index('recordname');
+			$table->string('record_type', 6);
+			$table->string('record_value', 96);
+			$table->index(['domain_id','record_type'], 'domain_id');
 		});
 	}
 

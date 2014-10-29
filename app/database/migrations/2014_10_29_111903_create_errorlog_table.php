@@ -17,7 +17,7 @@ class CreateErrorlogTable extends Migration {
 			$table->string('type', 8)->index('type');
 			$table->integer('time');
 			$table->string('section', 16);
-			$table->text('message')->index('message');
+			$table->text('message');
 		});
 	}
 

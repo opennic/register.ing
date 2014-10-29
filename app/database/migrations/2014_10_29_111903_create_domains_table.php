@@ -14,14 +14,14 @@ class CreateDomainsTable extends Migration {
 	{
 		Schema::create('domains', function(Blueprint $table)
 		{
-			$table->integer('domainID', true);
+			$table->integer('domain_id', true);
 			$table->string('domain', 64);
-			$table->integer('tldID');
-			$table->integer('userID')->index('userID');
-			$table->integer('registerTime')->default(0)->index('registerTime');
-			$table->integer('useRemote')->default(1);
-			$table->boolean('needsUpdate')->default(1)->index('needsUpdate');
-			$table->unique(['domain','tldID'], 'domain');
+			$table->integer('tld_id');
+			$table->integer('user_id')->index('userID');
+			$table->integer('register_time')->default(0)->index('register_time');
+			$table->integer('use_remote')->default(1);
+			$table->boolean('needs_update')->default(1)->index('needs_update');
+			$table->unique(['domain','tld_id'], 'domain');
 		});
 	}
 

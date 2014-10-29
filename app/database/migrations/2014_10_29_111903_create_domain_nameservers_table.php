@@ -14,11 +14,11 @@ class CreateDomainNameserversTable extends Migration {
 	{
 		Schema::create('domain_nameservers', function(Blueprint $table)
 		{
-			$table->integer('domainID');
-			$table->integer('nsID', true);
-			$table->string('nsName', 6);
-			$table->string('nsIP', 16);
-			$table->index(['domainID','nsName'], 'domainID');
+			$table->integer('domain_id');
+			$table->integer('ns_id', true);
+			$table->string('ns_name', 6);
+			$table->string('ns_ip', 16);
+			$table->index(['domain_id','ns_name'], 'domain_id');
 		});
 	}
 

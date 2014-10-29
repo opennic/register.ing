@@ -14,7 +14,7 @@ class CreateTldsTable extends Migration {
 	{
 		Schema::create('tlds', function(Blueprint $table)
 		{
-			$table->integer('tldID', true);
+			$table->integer('tld_id', true);
 			$table->string('tld', 8)->index('tld');
 			$table->boolean('public')->default(1)->index('public');
 			$table->text('description');

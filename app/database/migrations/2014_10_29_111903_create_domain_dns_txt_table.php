@@ -14,8 +14,8 @@ class CreateDomainDnsTxtTable extends Migration {
 	{
 		Schema::create('domain_dns_txt', function(Blueprint $table)
 		{
-			$table->integer('domainID')->index('domainID');
-			$table->integer('textID', true);
+			$table->integer('domain_id')->index('domainID');
+			$table->integer('text_id', true);
 			$table->string('text', 256);
 		});
 	}
