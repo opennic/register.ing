@@ -15,7 +15,9 @@
                 @endif
 
                 @if (Session::get('notice'))
-                    <div class="alert">{{ Session::get('notice') }}</div>
+                    <div class="callout callout-info">
+                        <h4>{{ Session::get('notice') }}</h4>
+                    </div>
                 @endif
 
                 <input type="hidden" name="_token" value="{{{ Session::getToken() }}}">
