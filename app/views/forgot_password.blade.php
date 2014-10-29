@@ -29,7 +29,11 @@
                     </div>
                 </fieldset>
 
+                <div class="form-actions form-group">
+                    <button type="submit" class="btn bg-olive btn-block">{{{ Lang::get('confide::confide.forgot.submit') }}}</button>
+                </div>
 
+                </form>
                 </div>
                 <div class="footer">
                     <p><a href="{{{ URL::to('/users/login') }}}">I know my password</a></p>
