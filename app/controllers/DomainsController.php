@@ -20,7 +20,19 @@ class DomainsController extends \BaseController {
 	{
         //
         return View::make('domains');
-	}
+    }
+
+    public function datatable()
+    {
+        $query = new Domains;
+
+        $columns = ['domain', 'tld_id', 'register_time'];
+        return Datatable::query($query)
+            ->showColumns($columns)
+            ->searchColumns($columns)
+            ->orderColumns($columns)
+            ->make();
+    }
 
 	/**
 	 * Show the form for creating a new resource.
