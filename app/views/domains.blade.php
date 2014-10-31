@@ -7,4 +7,15 @@
 
 @section('content')
 @include('register_domain')
+
+{{
+
+    Datatable::table()
+    ->addColumn('Domain', 'TLD', 'Edit')
+    ->setUrl('domain/list')
+    ->render()
+
+}}
+
+
 @stop
