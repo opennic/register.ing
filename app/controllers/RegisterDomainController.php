@@ -12,6 +12,8 @@ class RegisterDomainController extends \BaseController {
         );
         Domains::insert($domain);
 
+        Queue::push('JobController@run');
+
         return Redirect::to('/domains');
 	}
 
