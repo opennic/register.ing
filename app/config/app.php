@@ -124,6 +124,8 @@ return array(
 
         'Zizaco\Confide\ServiceProvider',
         'Zizaco\Entrust\EntrustServiceProvider',
+        'Way\Generators\GeneratorsServiceProvider',
+        'Chumper\Datatable\DatatableServiceProvider',
 
 	),
 
@@ -192,8 +194,9 @@ return array(
 		'Validator'       => 'Illuminate\Support\Facades\Validator',
 		'View'            => 'Illuminate\Support\Facades\View',
 
-        'Confide'    => 'Zizaco\Confide\Facade',
-        'Entrust'    => 'Zizaco\Entrust\EntrustFacade',
+        'Confide'         => 'Zizaco\Confide\Facade',
+        'Entrust'         => 'Zizaco\Entrust\EntrustFacade',
+        'Datatable'       => 'Chumper\Datatable\Facades\DatatableFacade',
 
 	),
 
